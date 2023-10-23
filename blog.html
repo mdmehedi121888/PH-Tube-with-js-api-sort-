@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="container w-[80%] mx-auto my-5">
+    <div >
+        <h1 class="text-lg">Q:1 Discuss the scope of var, let, and const</h1>
+        <hr>
+        <br>
+        <h1 class="text-lg">Scope of var :</h1><br>
+        <p>var declarations are globally scoped or function/locally scoped.
+
+            The scope is global when a var variable is declared outside a function. This means that any variable that is declared with var outside a function block is available for use in the whole window.
+            
+            var is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function.</p>
+            <h1 class="text-lg">Example :</h1>
+           <pre>
+            var user1 = 'student1';
+            function Fun(){
+            var user2 = 'student2'
+            }
+           </pre>
+                <br>
+                <p>Here, user1 is globally scoped because it exists outside a function while user2 is function scoped.
+
+                    If we try to access user1 inside the function Fun() It will not give any error beacause user1 is global scoped variable</p>
+                    <br>
+                  <pre>
+                    var user1 = 'student1';
+                    function Fun(){
+                    var user2 = 'student2'
+                    } 
+                    console.log(user2);//user2 is not defined
+                  </pre>
+                  <br> 
+                  <p>We'll get an error which is as a result of user2 not being available outside the function.</p>
+                  <h1 class="text-lg">Scope of let :</h1>
+                  <p>let is block scoped.So a variable declared in a block with let is only available for use within that block</p>
+                  <h1 class="text-lg">Example :</h1><br>
+                 
+                    <pre>
+                        let start = 4;
+                        if (start > 3) {
+                        let hello = "say Hello instead";
+                        console.log(hello);//say Hello instead
+                        }
+                        console.log(hello);//hello is not defined
+                    </pre>
+                  <p>We see that using hello outside its block (the curly braces where it was defined) returns an error. This is because let variables are block scoped.</p>
+                  <h1 class="text-lg">Scope of const :</h1>
+                  <p>const is block scoped.So a variable declared in a block with const is only available for use within that block</p>
+                  <h1 class="text-lg">Example :</h1>
+                  <pre> let start = 4;
+                    if (start > 3) {
+                    const hello = "say Hello instead";
+                    console.log(hello);//say Hello instead
+                    }
+                    console.log(hello);//hello is not defined</pre>
+                    <p>We see that using hello outside its block (the curly braces where it was defined) returns an error. This is because const variables are block scoped.</p>
+                    <br>
+                    <h1 class="text-lg">Q:2 Tell us the use cases of null and undefined</h1>
+                    <hr>
+                    <br>
+                    <h1 class="text-lg">Use cases of null :</h1>
+                    <br>
+            <p>
+                In JavaScript, null is a special value that represents the intentional absence of any object value or the lack of a value.
+
+1. Default Values : You can use null as a default value for function parameters when you want to allow the caller to explicitly specify that no value should be used.
+
+2. Initializing Variables : You can initialize a variable with null to indicate that it doesn't currently have a value, but it might have one later.
+
+3. Clearing Values : You can set a variable to null to clear its value or release resources associated with it, like in the case of event listeners or object properties.
+
+4. Checking for Existence : You can use null to check if a variable or object property has been assigned a value. If it's null, you know it hasn't been assigned.
+
+5. Returning from Functions : Functions often return null to indicate that they couldn't produce a valid result, or when an error occurs.
+6. Placeholder for Missing Values : In data structures or databases, null can be used to represent missing or unknown values.
+
+7. Removing Object References : Setting an object reference to null can help with garbage collection, allowing the JavaScript engine to free up memory for objects that are no longer in use.
+            </p>    
+           <br>
+            <h1 class="text-lg">Use cases of undefined :</h1> 
+            <br>  
+            <p>In JavaScript, the undefined value is a primitive data type that represents the absence of a value. It's often used to indicate that a variable or property has been declared but has not been assigned a value
+
+                1. Variable Declaration without Initialization : When you declare a variable without assigning it a value, it is automatically initialized to undefined
+                
+                2. Function Parameters : If a function is called with fewer arguments than it expects, the missing parameters are automatically set to undefined.
+                
+                3. Object Properties : If you access a property that does not exist in an object, it will return undefined.
+                
+                4. Array Elements : If you access an array element at an index that is out of bounds, it will return undefined.
+                
+                5. Return Value : When a function does not explicitly return a value, it returns undefined by default.
+                
+                6. Default Parameter Values : You can use undefined as a default value for function parameters.</p> 
+                <br>
+                <h1 class="text-lg">Q:3 What do you mean by REST API?</h1> 
+                <hr>
+                <br>
+                <p>
+                    REST is a set of guidelines that software can use to communicate over the internet in order to make integrations simple and scalable. A REST API (also called a “RESTful” API) is a specific type of API that follows these guidelines.
+                    
+                    REST stands for Representational State Transfer. This means that when a client requests a resource using a REST API, the server transfers back the current state of the resource in a standardized representation.
+                    
+                    To understand REST, we need to review some key terms first:
+                    
+                    A client is the person or program using the API. The client makes requests to the API in order to retrieve some information or change something within the application. Your web browser is a client — it interacts with APIs different websites to get page content from them. The requested info is sent back to your browser and displayed on your screen.
+                    
+                    A resource is any piece of information that the API can provide the client. For instance, a resource in Facebook’s API could be a user, a page, a photo, or a post. Each resource has a unique name, called the resource identifier.
+                    
+                    A server is used by the application that receives client requests, and contains resources that the client wants. The server has an API to interact with clients without giving them direct access to content stored in its database.</p>    
+                    <br><br>    
+    </div>
+</body>
+</html>
